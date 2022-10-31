@@ -1,0 +1,23 @@
+
+ <div class="wrapper text-center shadow-lg p-3 mb-5 bg-body rounded bg-light">
+    <div class="logo rounded-circle">
+        <img src="../../assets/image/bnk.jpg" alt="">
+    </div>
+    <div class="text-center mt-4 fs-2 fw-bold name "> 
+        My Bank
+    </div>
+    <h6>{{aim}}</h6>
+    <form action="" class="text-center p-3 mt-3 rounded-4 ">
+        <div class="form-field d-flex align-content-center m-3 shadow-lg rounded">
+            <input style="margin-left: auto; margin-right: auto;" (change)="acnoChange($event)" type="text" name="acno" id="login_acno" [placeholder]="accounts">
+        </div>
+        <div class="form-field d-flex align-items-center m-3 shadow-lg rounded">
+            <input style="margin-left: auto; margin-right: auto;" (change)="pswdChange($event)" type="password" name="password" id="login_pswd" placeholder="Password">
+        </div>
+        <button class="btn btn-primary mt-3 shadow-lg rounded" (click)="login()" type="button">Login</button>
+    </form>
+    <div class="text-center m-3">
+        <a href="#">Forgot Password?</a> or <a href="#">Sign up</a>
+    </div>
+</div>
+<app-registration></app-registration>
