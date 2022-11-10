@@ -5,19 +5,20 @@
     <div class="text-center fs-6 fw-bold mt-4 name">
         My Bank
     </div>
-    <form action="" class="text-center p-3 mt-3 ">
+    <!-- property binding [formgroup]-->
+    <form  [formGroup]="registerForm" class="text-center p-3 mt-3 ">
         <div class="form-field d-flex align-content-center m-3 shadow-lg rounded">
-            <input type="text" name="userName" id="reg_name" placeholder="Username">
+            <input  formControlName="uname" type="text" name="userName" id="reg_name" placeholder="Username">
         </div>
         <div class="form-field d-flex align-content-center m-3 shadow-lg rounded">
-            <input type="text" name="acno" id="reg_acno" placeholder="Account number">
+            <input formControlName="acno" type="text" name="acno" id="reg_acno" placeholder="Account number">
         </div>
         <div class="form-field d-flex align-items-center m-3 shadow-lg rounded">
-            <input type="password" name="password" id="reg_pswd" placeholder="Password">
+            <input formControlName="pswd" type="password" name="password" id="reg_pswd" placeholder="Password">
         </div>
-        <button class="btn btn-primary mt-3 shadow-lg rounded" onclick="register()" type="button">Register</button>
+        <button class="btn btn-primary mt-3 shadow-lg rounded" (click)="register()" type="button">Register</button>
     </form>
     <div class="text-center m-2">
-        <a href="#">Sign in</a>
+        <a routerLink="">Sign in</a>
     </div>
 </div>

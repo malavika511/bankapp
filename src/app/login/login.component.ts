@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +15,8 @@ export class LoginComponent implements OnInit { //3rd execution
   pswd="";
   
   
-  constructor() { } //1st execution
+  constructor(private router:Router ,private ds:DataService ) { } //1st execution
+//dependency injection
 
   ngOnInit(): void { //life cycle hooks-(initial process) //2nd execution
   }
@@ -42,22 +45,38 @@ pswdChange(event:any){
     var acno=this.acno;
     var pswd=this.pswd;
 
-    var userDetails=this.userDetails;
+   const result=this.ds.login(acno,pswd)
 
-    if(acno in userDetails)
-    {
-      if(pswd==userDetails[acno]['password']){
-        alert("login successfull");
-
-      }
-      else{
-        alert("incorrect password")
-      }
-    }
-    else{
-      alert("user does not existed")
-    }
-
+    if(result){
+    alert("login successfull");
+    this.router.navigateByUrl('dashboard');
   }
-
 }
+}
+
+  // login(a:any,p:any){
+  //   // alert('Login Cliked')
+
+  //   var acno=a.value;
+  //   var pswd=p.value;
+
+  //   var userDetails=this.userDetails;
+
+  //   if(acno in userDetails)
+  //   {
+  //     if(pswd==userDetails[acno]['password']){
+  //       alert("login successfull");
+
+  //     }
+  //     else{
+  //       alert("incorrect password")
+  //     }
+  //   }
+  //   else{
+  //     alert("user does not existed")
+  //   }
+
+  // }
+
+
+ 

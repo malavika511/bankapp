@@ -1,0 +1,32 @@
+Dependency Injection
+----------------------
+
+To Share data  between dependent classes
+
+Angular Services
+-----------------
+ng g c servicename
+
+Angular Directives
+-------------------
+To manipulate DOM elements
+
+a)component Directives
+
+b)structural Directives
+  1)ngFor
+
+
+
+Angular Forms
+--------------
+
+a)Template Driven Forms(First design html)-html page designing 
+
+
+b)Model Driven Forms(First design ts files then html )-adv validation methods
+   1)Reactive Form
+   form group,array,control
+   -we can directly add validation methods
+       ->add validation
+       ->import reactive forms modules

@@ -1,0 +1,15 @@
+table,th,tr,td{
+    color: rgb(18, 20, 20);
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+#a1{
+    color: rgb(4, 255, 0);
+    text-align: center;
+    margin-top: 20px;
+    
+}

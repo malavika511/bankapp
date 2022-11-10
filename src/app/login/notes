@@ -8,9 +8,23 @@ html -> ts or ts -> html
     html:-view
 
     1.1 Component to view (ts -> html)
-        a) string interpolation - {(expression)}
+        a) string interpolation - {{expression}}
         b) Property Binding - [attribute name]="Property"
 
     1.2 View to Component (html -> ts)
         a)Event Binding -(event name)="function name()" 
         b)Event Binding using $(event) - (event name)="function name($event)  
+        c)Event Binding using template referencing variables-#variable name
+
+2)Two Way Binding
+
+
+Angular Routing
+
+    -To set path for a component
+    
+    {
+        path:'value',component:class name
+    }
+
+    
