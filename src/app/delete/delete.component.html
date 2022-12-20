@@ -1,0 +1,8 @@
+<div *ngIf="item" class="text-center">
+
+    <!-- *ngIf="item" to set the visibility of data -->
+    <h4>Are you sure do yo want to delete this account {{item}} ?</h4>
+    <button style="float:right; width: 5%;" class="btn btn-success" >Yes</button>
+    <button style="float:right; width: 5%;" class="btn btn-dark" (click)="cancel()" >No</button>
+</div>
+
